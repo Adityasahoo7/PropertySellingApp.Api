@@ -1,0 +1,17 @@
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\bin\Debug\net6.0\PropertySellingApp.DataAccess.deps.json
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\bin\Debug\net6.0\PropertySellingApp.DataAccess.runtimeconfig.json
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\bin\Debug\net6.0\PropertySellingApp.DataAccess.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\bin\Debug\net6.0\PropertySellingApp.DataAccess.pdb
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\bin\Debug\net6.0\PropertySellingApp.Models.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\bin\Debug\net6.0\PropertySellingApp.Models.pdb
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.csproj.AssemblyReference.cache
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.AssemblyInfoInputs.cache
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.AssemblyInfo.cs
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.csproj.CoreCompileInputs.cache
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.csproj.CopyComplete
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\refint\PropertySellingApp.DataAccess.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.pdb
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\PropertySellingApp.DataAccess.genruntimeconfig.cache
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.DataAccess\obj\Debug\net6.0\ref\PropertySellingApp.DataAccess.dll
