@@ -1,0 +1,14 @@
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\bin\Debug\net6.0\PropertySellingApp.Models.deps.json
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\bin\Debug\net6.0\PropertySellingApp.Models.runtimeconfig.json
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\bin\Debug\net6.0\PropertySellingApp.Models.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\bin\Debug\net6.0\PropertySellingApp.Models.pdb
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\PropertySellingApp.Models.csproj.AssemblyReference.cache
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\PropertySellingApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\PropertySellingApp.Models.AssemblyInfoInputs.cache
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\PropertySellingApp.Models.AssemblyInfo.cs
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\PropertySellingApp.Models.csproj.CoreCompileInputs.cache
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\PropertySellingApp.Models.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\refint\PropertySellingApp.Models.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\PropertySellingApp.Models.pdb
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\PropertySellingApp.Models.genruntimeconfig.cache
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Models\obj\Debug\net6.0\ref\PropertySellingApp.Models.dll
