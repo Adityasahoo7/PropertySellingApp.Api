@@ -81,3 +81,10 @@ D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\obj\Debug\net6.0
 D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\obj\Debug\net6.0\PropertySellingApp.Api.pdb
 D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\obj\Debug\net6.0\PropertySellingApp.Api.genruntimeconfig.cache
 D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\obj\Debug\net6.0\ref\PropertySellingApp.Api.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\OpenAI.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\System.ClientModel.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\System.Memory.Data.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\System.Text.Json.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

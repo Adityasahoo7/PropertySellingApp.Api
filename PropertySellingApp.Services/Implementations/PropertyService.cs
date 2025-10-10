@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using PropertySellingApp.Models.Extensions;
 
 namespace PropertySellingApp.Services.Implementations
 {
@@ -15,11 +17,15 @@ namespace PropertySellingApp.Services.Implementations
     {
         private readonly IPropertyRepository _properties;
         private readonly IUserRepository _users;
+        private readonly IAiService _aiService;
+        private readonly ILogger<PropertyService> _logger;
 
-        public PropertyService(IPropertyRepository properties, IUserRepository users)
+        public PropertyService(IPropertyRepository properties, IUserRepository users, IAiService ai, ILogger<PropertyService> logger)
         {
             _properties = properties;
             _users = users;
+            _aiService = ai;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<PropertyResponse>> GetAllAsync()
@@ -124,6 +130,54 @@ namespace PropertySellingApp.Services.Implementations
             return "/images/properties/" + fileName;
         }
 
+
+        //// Method for SearchBar
+        //public async Task<IEnumerable<PropertyResponse>> SearchAsync(string query)
+        //{
+        //    var properties = await _properties.SearchAsync(query);
+        //    return properties.Select(p => MapToDto(p));
+        //}
+        //public async Task<IEnumerable<PropertyResponse>> SearchAsync(string query)
+        //{
+        //    var aiResult = await _ai.ParseSearchQueryAsync(query); // AI parsing
+
+        //    IEnumerable<Property> properties;
+        //    if (aiResult != null)
+        //        properties = await _properties.SearchAsync(aiResult); // uses new DAL method
+        //    else
+        //        properties = await _properties.SearchAsync(new AiSearchResult { Keywords = query }); // fallback
+
+        //    return properties.Select(p => MapToDto(p));
+
+        //}
+
+        public async Task<IEnumerable<PropertyResponse>> SearchAsync(string naturalQuery)
+        {
+            if (string.IsNullOrWhiteSpace(naturalQuery))
+                return Enumerable.Empty<PropertyResponse>();
+
+            // 1️⃣ Ask AI to parse
+            var filter = await _aiService.ParseSearchQueryAsync(naturalQuery);
+
+            IEnumerable<Property> properties;
+
+            // 2️⃣ Fallback or AI-based search
+            if (filter == null || filter.IsEmpty())
+            {
+                _logger.LogInformation("AI returned no structured filter — falling back to keyword search for '{q}'", naturalQuery);
+                properties = await _properties.SearchAsync(new AiSearchResult { Keywords = naturalQuery });
+            }
+            else
+            {
+                properties = await _properties.SearchAsync(filter);
+            }
+
+            // 3️⃣ Map to DTO before returning
+            return properties.Select(p => MapToDto(p));
+
+        }
+
+
         private static PropertyResponse MapToDto(Property p, bool includeSellerName = true)
         {
             return new PropertyResponse(
@@ -142,5 +196,7 @@ namespace PropertySellingApp.Services.Implementations
                 p.CreatedAt
             );
         }
+
+        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PropertySellingApp.Models.DTOs;
+using PropertySellingApp.Services.Implementations;
 using PropertySellingApp.Services.Interfaces;
 using System.Security.Claims;
 
@@ -44,6 +45,18 @@ namespace PropertySellingApp.Api.Controllers
             var id = await _svc.CreateAsync(sellerId, request);
             return Ok(id);
         }
+
+        // PropertiesController.cs
+        [HttpGet("search")]
+        public async Task<IActionResult> Search([FromQuery] string q)
+        {
+            if (string.IsNullOrWhiteSpace(q))
+                return BadRequest("Search term cannot be empty.");
+
+            var results = await _svc.SearchAsync(q);
+            return Ok(results);
+        }
+
 
         [HttpPut("{id:int}")]
         [Authorize(Roles = "Seller,Admin")]  // 👈 string roles

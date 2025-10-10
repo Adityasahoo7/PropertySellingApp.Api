@@ -28,6 +28,13 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPropertyService, PropertyService>();
 builder.Services.AddScoped<IVisitRequestService, VisitRequestService>();
 builder.Services.AddSingleton<TokenService>();
+builder.Services.AddHttpClient<IAiService, GroqAiService>();
+builder.Services.AddScoped<IAiService, GroqAiService>();
+//builder.Services.AddScoped<IPropertyService, PropertyService>();
+//builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
+//builder.Services.AddScoped<IPropertyService, PropertyService>();
+
+
 
 builder.Services.AddControllers();
 
