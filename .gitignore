@@ -1,7 +1,4 @@
-# Ignore bin and obj folders
+# Ignore config and build files
 bin/
 obj/
-
-# Ignore local config files
-PropertySellingApp.Api/bin/Debug/net6.0/appsettings.json
-
+PropertySellingApp.Api/appsettings.json
