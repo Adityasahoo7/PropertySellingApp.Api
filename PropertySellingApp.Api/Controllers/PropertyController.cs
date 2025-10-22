@@ -43,6 +43,11 @@ namespace PropertySellingApp.Api.Controllers
         {
             int sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "0");
             var id = await _svc.CreateAsync(sellerId, request);
+            await _svc.CreateAsync(sellerId, request);
+            await _svc.CreateAsync(sellerId, request);
+            await _svc.CreateAsync(sellerId, request);
+            await _svc.CreateAsync(sellerId, request);
+            await _svc.CreateAsync(sellerId, request);
             return Ok(id);
         }
 

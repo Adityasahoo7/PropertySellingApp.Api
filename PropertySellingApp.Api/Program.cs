@@ -30,6 +30,8 @@ builder.Services.AddScoped<IVisitRequestService, VisitRequestService>();
 builder.Services.AddSingleton<TokenService>();
 builder.Services.AddHttpClient<IAiService, GroqAiService>();
 builder.Services.AddScoped<IAiService, GroqAiService>();
+builder.Services.AddScoped<IChatRepository, ChatRepository>();
+builder.Services.AddScoped<IChatService, ChatService>();
 //builder.Services.AddScoped<IPropertyService, PropertyService>();
 //builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
 //builder.Services.AddScoped<IPropertyService, PropertyService>();

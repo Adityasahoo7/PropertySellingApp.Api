@@ -88,3 +88,5 @@ D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0
 D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\System.Text.Json.dll
 D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\DotNet Project\PropertySellingApp.Api\PropertySellingApp.Api\bin\Debug\net6.0\RestSharp.dll

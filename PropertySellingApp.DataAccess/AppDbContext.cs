@@ -20,9 +20,10 @@ namespace PropertySellingApp.DataAccess
     public DbSet<User> Users => Set<User>();
     public DbSet<Property> Properties => Set<Property>();
     public DbSet<VisitRequest> VisitRequests => Set<VisitRequest>();
+    public DbSet<ChatHistory> ChatHistories => Set<ChatHistory>();
 
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<User>()
         .HasIndex(u => u.Email)
