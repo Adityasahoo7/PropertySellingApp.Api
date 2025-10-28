@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using PropertySellingApp.Models.Extensions;
+using Microsoft.Identity.Client.Extensions.Msal;
+using Azure.Storage.Blobs;
+using Azure.Core;
+using System.Reflection.Metadata;
 
 namespace PropertySellingApp.Services.Implementations
 {
@@ -19,13 +23,15 @@ namespace PropertySellingApp.Services.Implementations
         private readonly IUserRepository _users;
         private readonly IAiService _aiService;
         private readonly ILogger<PropertyService> _logger;
+        private readonly IStorage _storage;
 
-        public PropertyService(IPropertyRepository properties, IUserRepository users, IAiService ai, ILogger<PropertyService> logger)
+        public PropertyService(IPropertyRepository properties, IUserRepository users, IAiService ai, ILogger<PropertyService> logger,IStorage storage)
         {
             _properties = properties;
             _users = users;
             _aiService = ai;
             _logger = logger;
+            _storage = storage;
         }
 
         public async Task<IEnumerable<PropertyResponse>> GetAllAsync()
@@ -74,6 +80,80 @@ namespace PropertySellingApp.Services.Implementations
             return entity.Id;
         }
 
+        //public async Task<int> CreateAsync(int sellerId, PropertyCreateRequest request)
+        //{
+        //    var seller = await _users.GetByIdAsync(sellerId)
+        //        ?? throw new InvalidOperationException("Seller not found");
+
+        //    if (!seller.Role.Equals("Seller", StringComparison.OrdinalIgnoreCase) &&
+        //        !seller.Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        throw new UnauthorizedAccessException("Only sellers/admin can create properties");
+        //    }
+
+        //    // ✅ Upload image to Azure Blob Storage if file provided
+        //    string imageUrl = null;
+        //    if (request.ImageFile != null && request.ImageFile.Length > 0)
+        //    {
+        //        using (var stream = request.ImageFile.OpenReadStream())
+        //        {
+        //            imageUrl = await _storage.UploadAsync(stream, request.ImageFile.FileName, request.ImageFile.ContentType);
+        //        } 
+        //    }
+
+        //    var entity = new Property
+        //    {
+        //        Title = request.Title,
+        //        Description = request.Description,
+        //        Type = request.Type,
+        //        Price = request.Price,
+        //        Location = request.Location,
+        //        Bedrooms = request.Bedrooms,
+        //        Bathrooms = request.Bathrooms,
+        //        AreaSqFt = request.AreaSqFt,
+        //        SellerId = sellerId,
+        //        ImageUrl = imageUrl // ✅ store blob URL
+        //    };
+
+        //    await _properties.AddAsync(entity);
+        //    await _properties.SaveChangesAsync();
+        //    return entity.Id;
+        //}
+
+
+
+        //Dummy method to test
+        public async Task<string> UploadFileAsync(IFormFile file)
+        {
+            string url = null;
+
+            using (var stream = file.OpenReadStream())
+            {
+             url=   await _storage.UploadAsync(stream, file.FileName, file.ContentType);
+            }
+            return url;
+        }
+
+      public async Task<bool> DeleteFileAsync(string filename)
+        {
+
+            return await _storage.DeleteAsync(filename);
+        }
+
+       public async Task<Stream> GetFileAsync(string filename)
+        {
+            return await _storage.GetAsync(filename);
+        }
+
+
+        public string GetSasUrl(string filename ,int time)
+        {
+            var url =  _storage.GenerateSasUrl(filename,time);
+            
+            return url;
+        }
+
+
         public async Task<bool> UpdateAsync(int id, int sellerId, PropertyUpdateRequest request, bool adminOverride = false)
         {
             var entity = await _properties.GetByIdAsync(id);
@@ -104,6 +184,15 @@ namespace PropertySellingApp.Services.Implementations
             if (entity == null) return false;
             if (!adminOverride && entity.SellerId != sellerId)
                 throw new UnauthorizedAccessException("Not your property");
+
+            if (!string.IsNullOrEmpty(entity.ImageUrl)) {
+
+                var url = entity.ImageUrl;
+
+                var filename = url.Split('/').Last();
+
+                await _storage.DeleteAsync(filename);
+            }
 
             _properties.Remove(entity);
             await _properties.SaveChangesAsync();

@@ -1,4 +1,5 @@
-﻿using PropertySellingApp.Models.DTOs;
+﻿using Microsoft.AspNetCore.Http;
+using PropertySellingApp.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,13 @@ namespace PropertySellingApp.Services.Interfaces
 
         Task<IEnumerable<PropertyResponse>> SearchAsync(string naturalQuery);
         // Task<List<PropertyResponse>> SearchAsync(AiSearchResult search);
+
+        Task<string> UploadFileAsync(IFormFile file);
+        Task<bool> DeleteFileAsync(string filename);
+
+        Task<Stream> GetFileAsync(string filename);
+
+        string GetSasUrl(string filename,int time);
 
 
 

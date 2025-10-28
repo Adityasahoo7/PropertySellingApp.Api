@@ -1,3 +1,4 @@
+using Microsoft.ApplicationInsights;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PropertySellingApp.Api.Controllers
@@ -12,15 +13,19 @@ namespace PropertySellingApp.Api.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly TelemetryClient _telemetry;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, TelemetryClient telemetry)
         {
+           
             _logger = logger;
+            _telemetry = telemetry;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            _telemetry.TrackEvent("Get Method Called");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -28,6 +33,7 @@ namespace PropertySellingApp.Api.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+
         }
     }
 }
