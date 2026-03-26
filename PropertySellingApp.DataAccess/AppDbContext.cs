@@ -21,6 +21,11 @@ namespace PropertySellingApp.DataAccess
     public DbSet<Property> Properties => Set<Property>();
     public DbSet<VisitRequest> VisitRequests => Set<VisitRequest>();
     public DbSet<ChatHistory> ChatHistories => Set<ChatHistory>();
+        public DbSet<LoginOtp> LoginOtps { get; set; }
+
+        public DbSet<LoginCaptcha> LoginCaptchas { get; set; }
+
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

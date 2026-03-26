@@ -29,6 +29,7 @@ namespace PropertySellingApp.Services.Security
 
             var claims = new List<Claim>
 {
+                 new Claim("uid", user.Id.ToString()),
 new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
 new(JwtRegisteredClaimNames.Email, user.Email),
 new(ClaimTypes.Name, user.FullName),

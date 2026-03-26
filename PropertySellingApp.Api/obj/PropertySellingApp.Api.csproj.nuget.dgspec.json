@@ -69,6 +69,10 @@
               "target": "Package",
               "version": "[12.26.0, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.14.1, )"
+            },
             "Microsoft.ApplicationInsights.AspNetCore": {
               "target": "Package",
               "version": "[2.23.0, )"
@@ -185,6 +189,10 @@
               "target": "Package",
               "version": "[12.26.0, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.14.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.36, )"
@@ -289,6 +297,10 @@
             "Azure.Storage.Blobs": {
               "target": "Package",
               "version": "[12.26.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.14.1, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -401,6 +413,10 @@
             "Azure.Storage.Blobs": {
               "target": "Package",
               "version": "[12.26.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.14.1, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

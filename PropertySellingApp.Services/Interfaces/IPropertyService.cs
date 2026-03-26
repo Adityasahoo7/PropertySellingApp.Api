@@ -24,6 +24,8 @@ namespace PropertySellingApp.Services.Interfaces
         Task<IEnumerable<PropertyResponse>> SearchAsync(string naturalQuery);
         // Task<List<PropertyResponse>> SearchAsync(AiSearchResult search);
 
+        Task<string> ConvertIFormFileToBase64Url(IFormFile file);
+
         Task<string> UploadFileAsync(IFormFile file);
         Task<bool> DeleteFileAsync(string filename);
 

@@ -122,36 +122,6 @@ namespace PropertySellingApp.Services.Implementations
 
 
 
-        //Dummy method to test
-        public async Task<string> UploadFileAsync(IFormFile file)
-        {
-            string url = null;
-
-            using (var stream = file.OpenReadStream())
-            {
-             url=   await _storage.UploadAsync(stream, file.FileName, file.ContentType);
-            }
-            return url;
-        }
-
-      public async Task<bool> DeleteFileAsync(string filename)
-        {
-
-            return await _storage.DeleteAsync(filename);
-        }
-
-       public async Task<Stream> GetFileAsync(string filename)
-        {
-            return await _storage.GetAsync(filename);
-        }
-
-
-        public string GetSasUrl(string filename ,int time)
-        {
-            var url =  _storage.GenerateSasUrl(filename,time);
-            
-            return url;
-        }
 
 
         public async Task<bool> UpdateAsync(int id, int sellerId, PropertyUpdateRequest request, bool adminOverride = false)
@@ -171,6 +141,7 @@ namespace PropertySellingApp.Services.Implementations
             entity.Bedrooms = request.Bedrooms;
             entity.Bathrooms = request.Bathrooms;
             entity.AreaSqFt = request.AreaSqFt;
+            //
             entity.ImageUrl = request.ImageUrl ?? entity.ImageUrl; // ✅ update only if new provided
 
             _properties.Update(entity);
@@ -185,16 +156,16 @@ namespace PropertySellingApp.Services.Implementations
             if (!adminOverride && entity.SellerId != sellerId)
                 throw new UnauthorizedAccessException("Not your property");
 
-            if (!string.IsNullOrEmpty(entity.ImageUrl)) {
+            //if (!string.IsNullOrEmpty(entity.ImageUrl)) {
 
-                var url = entity.ImageUrl;
+            //    var url = entity.ImageUrl;
 
-                var filename = url.Split('/').Last();
+            //    var filename = url.Split('/').Last();
 
-                await _storage.DeleteAsync(filename);
-            }
+            //    await _storage.DeleteAsync(filename);
+            //}
 
-            _properties.Remove(entity);
+             _properties.Remove(entity);
             await _properties.SaveChangesAsync();
             return true;
         }
@@ -266,7 +237,57 @@ namespace PropertySellingApp.Services.Implementations
 
         }
 
+        //Method That Convert the Iform file to Base64 url
 
+        public  async Task<string> ConvertIFormFileToBase64Url(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return null;
+
+            using (var memoryStream = new MemoryStream())
+            {
+                await file.CopyToAsync(memoryStream);
+                byte[] fileBytes = memoryStream.ToArray();
+
+                string base64String = Convert.ToBase64String(fileBytes);
+                string contentType = file.ContentType; // image/webp, image/png, etc.
+
+                return $"data:{contentType};base64,{base64String}";
+            }
+        }
+
+
+
+        //Dummy method to test
+        public async Task<string> UploadFileAsync(IFormFile file)
+        {
+            string url = null;
+
+            using (var stream = file.OpenReadStream())
+            {
+                url = await _storage.UploadAsync(stream, file.FileName, file.ContentType);
+            }
+            return url;
+        }
+
+        public async Task<bool> DeleteFileAsync(string filename)
+        {
+
+            return await _storage.DeleteAsync(filename);
+        }
+
+        public async Task<Stream> GetFileAsync(string filename)
+        {
+            return await _storage.GetAsync(filename);
+        }
+
+
+        public string GetSasUrl(string filename, int time)
+        {
+            var url = _storage.GenerateSasUrl(filename, time);
+
+            return url;
+        }
         private static PropertyResponse MapToDto(Property p, bool includeSellerName = true)
         {
             return new PropertyResponse(

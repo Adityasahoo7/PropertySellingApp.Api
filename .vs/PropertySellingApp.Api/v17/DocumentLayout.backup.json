@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|solutionrelative:propertysellingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|solutionrelative:propertysellingapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|solutionrelative:propertysellingapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{626143EC-8C16-4D9A-894A-D1605620CFA8}|PropertySellingApp.Models\\PropertySellingApp.Models.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.models\\propertysellingapp.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{626143EC-8C16-4D9A-894A-D1605620CFA8}|PropertySellingApp.Models\\PropertySellingApp.Models.csproj|solutionrelative:propertysellingapp.models\\propertysellingapp.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{526B2647-637D-4CE2-B1D5-B553521EC147}|PropertySellingApp.Services\\PropertySellingApp.Services.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.services\\security\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{526B2647-637D-4CE2-B1D5-B553521EC147}|PropertySellingApp.Services\\PropertySellingApp.Services.csproj|solutionrelative:propertysellingapp.services\\security\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{526B2647-637D-4CE2-B1D5-B553521EC147}|PropertySellingApp.Services\\PropertySellingApp.Services.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.services\\propertysellingapp.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{526B2647-637D-4CE2-B1D5-B553521EC147}|PropertySellingApp.Services\\PropertySellingApp.Services.csproj|solutionrelative:propertysellingapp.services\\propertysellingapp.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|solutionrelative:propertysellingapp.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8470952E-76AA-4C14-813A-312E4DAD91E6}|PropertySellingApp.DataAccess\\PropertySellingApp.DataAccess.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.dataaccess\\propertysellingapp.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8470952E-76AA-4C14-813A-312E4DAD91E6}|PropertySellingApp.DataAccess\\PropertySellingApp.DataAccess.csproj|solutionrelative:propertysellingapp.dataaccess\\propertysellingapp.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{526B2647-637D-4CE2-B1D5-B553521EC147}|PropertySellingApp.Services\\PropertySellingApp.Services.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{526B2647-637D-4CE2-B1D5-B553521EC147}|PropertySellingApp.Services\\PropertySellingApp.Services.csproj|solutionrelative:propertysellingapp.services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.api\\propertysellingapp.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{75045023-87B1-4B9B-809D-829F9F2753A6}|PropertySellingApp.Api\\PropertySellingApp.Api.csproj|solutionrelative:propertysellingapp.api\\propertysellingapp.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{526B2647-637D-4CE2-B1D5-B553521EC147}|PropertySellingApp.Services\\PropertySellingApp.Services.csproj|d:\\dotnet project\\propertysellingapp.api\\propertysellingapp.services\\implementations\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{526B2647-637D-4CE2-B1D5-B553521EC147}|PropertySellingApp.Services\\PropertySellingApp.Services.csproj|solutionrelative:propertysellingapp.services\\implementations\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +34,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Services\\Implementations\\EmailService.cs",
+              "RelativeDocumentMoniker": "PropertySellingApp.Services\\Implementations\\EmailService.cs",
+              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Services\\Implementations\\EmailService.cs",
+              "RelativeToolTip": "PropertySellingApp.Services\\Implementations\\EmailService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAEwDkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T12:04:35.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PropertySellingApp.Api\\appsettings.json",
+              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\appsettings.json",
+              "RelativeToolTip": "PropertySellingApp.Api\\appsettings.json",
+              "ViewState": "AgIAAAoAAACAZmZmZmYawBUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-26T11:57:50.44Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -44,75 +69,46 @@
               "RelativeDocumentMoniker": "PropertySellingApp.Api\\Program.cs",
               "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\Program.cs",
               "RelativeToolTip": "PropertySellingApp.Api\\Program.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAUwKgAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAALIAAAAAz8zMzMwQwL0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T07:44:56.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "PropertySellingApp.Api\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "PropertySellingApp.Api\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAIwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-25T07:44:27.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PropertySellingApp.Services.csproj",
-              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Services\\PropertySellingApp.Services.csproj",
-              "RelativeDocumentMoniker": "PropertySellingApp.Services\\PropertySellingApp.Services.csproj",
-              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Services\\PropertySellingApp.Services.csproj",
-              "RelativeToolTip": "PropertySellingApp.Services\\PropertySellingApp.Services.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-25T07:03:02.089Z",
+              "WhenOpened": "2026-01-25T12:50:39.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PropertySellingApp.Models.csproj",
-              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Models\\PropertySellingApp.Models.csproj",
-              "RelativeDocumentMoniker": "PropertySellingApp.Models\\PropertySellingApp.Models.csproj",
-              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Models\\PropertySellingApp.Models.csproj",
-              "RelativeToolTip": "PropertySellingApp.Models\\PropertySellingApp.Models.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-25T07:02:56.304Z",
-              "EditorCaption": ""
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Services\\Security\\TokenService.cs",
+              "RelativeDocumentMoniker": "PropertySellingApp.Services\\Security\\TokenService.cs",
+              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Services\\Security\\TokenService.cs",
+              "RelativeToolTip": "PropertySellingApp.Services\\Security\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-25T12:15:17.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "PropertySellingApp.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "PropertySellingApp.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAmwB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-25T12:12:36.036Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PropertySellingApp.DataAccess.csproj",
-              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.DataAccess\\PropertySellingApp.DataAccess.csproj",
-              "RelativeDocumentMoniker": "PropertySellingApp.DataAccess\\PropertySellingApp.DataAccess.csproj",
-              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.DataAccess\\PropertySellingApp.DataAccess.csproj",
-              "RelativeToolTip": "PropertySellingApp.DataAccess\\PropertySellingApp.DataAccess.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-25T07:02:49.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PropertySellingApp.Api.csproj",
-              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\PropertySellingApp.Api.csproj",
-              "RelativeDocumentMoniker": "PropertySellingApp.Api\\PropertySellingApp.Api.csproj",
-              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Api\\PropertySellingApp.Api.csproj",
-              "RelativeToolTip": "PropertySellingApp.Api\\PropertySellingApp.Api.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-25T07:02:38.473Z",
-              "EditorCaption": ""
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Services\\Implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "PropertySellingApp.Services\\Implementations\\AuthService.cs",
+              "ToolTip": "D:\\DotNet Project\\PropertySellingApp.Api\\PropertySellingApp.Services\\Implementations\\AuthService.cs",
+              "RelativeToolTip": "PropertySellingApp.Services\\Implementations\\AuthService.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAcwJgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-25T11:26:03.987Z"
             }
           ]
         }

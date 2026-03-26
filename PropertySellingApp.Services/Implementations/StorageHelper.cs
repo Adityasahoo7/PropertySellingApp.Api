@@ -24,8 +24,8 @@ namespace PropertySellingApp.Services.Implementations
 
         public StorageHelper(IConfiguration configuration)
         {
-             connectionString = configuration["BlobStorage:ConnectionString"];
-             containerName = configuration["BlobStorage:ContainerName"];
+             connectionString = configuration["BlobStoragev2:ConnectionStringv2"];
+             containerName = configuration["BlobStoragev2:ContainerNamev2"];
 
             _containerClient = new BlobContainerClient(connectionString, containerName);
             //_containerClient.CreateIfNotExists(PublicAccessType.Blob);

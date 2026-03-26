@@ -1,16 +1,18 @@
-using System.Text;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PropertySellingApp.Api.Middlewares;
 using PropertySellingApp.DataAccess;
 using PropertySellingApp.DataAccess.Interfaces;
 using PropertySellingApp.DataAccess.Repositories;
+using PropertySellingApp.Models.Entities;
 using PropertySellingApp.Services.Implementations;
 using PropertySellingApp.Services.Interfaces;
 using PropertySellingApp.Services.Security;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,28 +42,31 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Keyvault 
 
-var tenantId = builder.Configuration["Azure:TenantId"];
-var clientId = builder.Configuration["Azure:ClientId"];
-var clientSecret = builder.Configuration["Azure:ClientSecret"];
-var keyVaultUrl = builder.Configuration["Keyvault:KeyVaultUrl"];
+//var tenantId = builder.Configuration["Azure:TenantId"];
+//var clientId = builder.Configuration["Azure:ClientId"];
+//var clientSecret = builder.Configuration["Azure:ClientSecret"];
+//var keyVaultUrl = builder.Configuration["Keyvault:KeyVaultUrl"];
 
-var credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
+//Keyvaultv2
+//var tenantId = builder.Configuration["connectionstringv2:TenantId"];
+//var clientId = builder.Configuration["connectionstringv2:ClientId"];
+//var clientSecret = builder.Configuration["connectionstringv2:ClientSecret"];
+//var keyVaultUrl = builder.Configuration["Keyvaultv2:KeyVaultUrlv2"];
 
-var client = new SecretClient(new Uri(keyVaultUrl), credential);
-var secret = client.GetSecret("dbconn");
+//var credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
 
-Console.WriteLine($"Database Connection: {secret.Value.Value}");
-
-
-builder.Services.AddDbContext<AppDbContext>(opt =>
-opt.UseSqlServer(secret.Value.Value));
-
-
-
-
-// Add DbContext
+//var client = new SecretClient(new Uri(keyVaultUrl), credential);
+//var secret = client.GetSecret("serverdbconnv2");
+//Console.WriteLine($"Database Connection: {secret.Value.Value}");
 //builder.Services.AddDbContext<AppDbContext>(opt =>
-//opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConn")));
+//opt.UseSqlServer(secret.Value.Value));
+
+
+
+
+//Add DbContext
+builder.Services.AddDbContext<AppDbContext>(opt =>
+opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConn")));
 
 //Add Dependancy Injection
 // Repositories
@@ -77,6 +82,12 @@ builder.Services.AddHttpClient<IAiService, GroqAiService>();
 builder.Services.AddScoped<IAiService, GroqAiService>();
 builder.Services.AddScoped<IChatRepository, ChatRepository>();
 builder.Services.AddScoped<IChatService, ChatService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<ILoginOtpRepository, LoginOtpRepository>();
+
+builder.Services.AddScoped<ICaptchaService, CaptchaService>();
+builder.Services.AddScoped<ILoginCaptchaRepository, LoginCaptchaRepository>();
+
 //builder.Services.AddScoped<IPropertyService, PropertyService>();
 //builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
 //builder.Services.AddScoped<IPropertyService, PropertyService>();
@@ -87,23 +98,30 @@ builder.Services.AddScoped<IStorage, StorageHelper>();
 
 
 builder.Services.AddControllers();
-
 // ---------------- CORS ----------------------------
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200")  // Angular origin
+            policy.WithOrigins("http://localhost:4200",
+                "https://1acresui-h5fhf6gpenfxb7hd.canadacentral-01.azurewebsites.net"
+                    )  // Angular origin
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials();
         });
 });
 
+
 //"http://localhost:4200",
 
 //https://contactapp.fwh.is
+
+//Mail Reading Configuration
+builder.Services.Configure<SmtpSettings>(
+    builder.Configuration.GetSection("SmtpSettings"));
+
 
 // JWT Auth
 var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!);
@@ -158,11 +176,12 @@ builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["Applicat
 
 
 var app = builder.Build();
+app.UseMiddleware<ExceptionMiddleware>();//Configure custom exception middleware 1st in the pipeline
 
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{
-    app.UseSwagger();
+app.UseSwagger();
     app.UseSwaggerUI();
 //}
 
